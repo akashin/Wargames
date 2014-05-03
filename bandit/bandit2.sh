@@ -2,4 +2,4 @@
 
 . bandit.sh 2
 execute "ls -l"
-submit `execute "cat spaces\ in\ this\ filename"`
+submit "cat spaces\ in\ this\ filename"

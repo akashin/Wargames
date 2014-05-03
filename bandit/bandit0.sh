@@ -2,4 +2,4 @@
 
 . bandit.sh 0
 execute "ls -l"
-submit `execute "cat readme"`
+submit "cat readme"

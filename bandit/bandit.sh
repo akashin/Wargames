@@ -13,13 +13,16 @@ fi
 
 function execute()
 {
+	echo 1>&2
+	echo "<---------------------------------------------------------------->" 1>&2
 	COMMAND=$1
-	sshpass -p $PASS ssh -o StrictHostKeyChecking=no $TASK@bandit.labs.overthewire.org $COMMAND
+	echo "Executing command " \"$COMMAND\" 1>&2
+	sshpass -p $PASS ssh -o StrictHostKeyChecking=no $TASK@bandit.labs.overthewire.org "$COMMAND"
 }
 
 function submit()
 {
-	KEY=$1
+	KEY=`execute "$1"`
 	echo key is: \"$KEY\"
 	echo -n $KEY > keys/$TASK.key
 }

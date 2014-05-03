@@ -2,4 +2,4 @@
 
 . bandit.sh 1
 execute "ls -l"
-submit `execute "cat ./-"`
+submit "cat ./-"
