@@ -17,7 +17,7 @@ function execute()
 	echo "<---------------------------------------------------------------->" 1>&2
 	COMMAND=$1
 	echo "Executing command " \"$COMMAND\" 1>&2
-	sshpass -p $PASS ssh -o StrictHostKeyChecking=no $TASK@bandit.labs.overthewire.org "$COMMAND"
+	sshpass -p $PASS ssh -A -t -o StrictHostKeyChecking=no $TASK@bandit.labs.overthewire.org "$COMMAND"
 }
 
 function submit()
